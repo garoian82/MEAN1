@@ -1,10 +1,8 @@
 (function () {
 	'use strict';
-
 	angular.module('app', ['ui.router', 'app.ui', 'ui.bootstrap'])
 
 	.config(function ($stateProvider, $urlRouterProvider) {
-
 		//Default route
 		$urlRouterProvider.otherwise('/projects');
 

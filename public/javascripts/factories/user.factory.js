@@ -15,6 +15,7 @@
 			User.prototype = {
 				fullName: function fullName() {
 					return this.first_name + ' ' + this.last_name;
+					debugger;
 				}
 			};
 

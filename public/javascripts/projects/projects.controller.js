@@ -6,12 +6,11 @@
 		.controller('ProjectsController', function (projects, Projects, $modal, $state) {
 			var vm = this;
 
-
 			vm.projects = projects;
 			vm.remove = Projects.del;
 			vm.addProject = function addProject() {
 				var modalInstatance = $modal.open ({
-					templateUrl: 'javascripts/projects/new.html',
+					templateUrl: 'partials/projects/new.html',
 					controller: 'NewProjectCtrl',
 					controllerAs: 'newProject',
 					size: 'md'

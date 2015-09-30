@@ -31,8 +31,10 @@
 
 				return $http.post('/projects/', project)
 				.then(function (res) {
+					debugger;
 					res.data.user = Users.find(res.data.user);
 					vm.projects.push(res.data);
+					debugger;
 				});
 			};
 

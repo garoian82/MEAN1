@@ -32,8 +32,4 @@ router.put('/:userId', function (req, res) {
 	});
 });
 
-router.get('/email', function(req, res){
-
-});
-
 module.exports = router;
