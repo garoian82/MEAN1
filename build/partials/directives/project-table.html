@@ -1,0 +1,28 @@
+<div>
+	<table class="table table-striped table-responsive">
+		<thead>
+			<tr>
+				<th>Project Title</th>
+				<th>User</th>
+				<th>Email</th>
+				<th>Created At</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tr data-ng-repeat="project in projects">
+			<!-- sref is a state reference -->
+			<td><a data-ui-sref="projects.detail({projectId: project._id})">{{project.title}}</a></td>
+			<td>{{project.user.fullName()}}</td>
+			<td>{{project.user.email}}</td>
+			<td>{{project.created_at | niceDate: 'MM-DD-YYYY'}}</td>
+			<td>
+				<a data-ui-sref="projects.detail({projectId: project._id})"><span class="glyphicon glyphicon-pencil"></span>edit</a>
+			</td>
+			<td>
+				<a data-ng-click="remove(project._id)" style="color: red; cursor: pointer;"><span class="glyphicon glyphicon-remove"></span>Delete</a>
+			</td>
+
+		</tr>
+	</table>
+
+</div>

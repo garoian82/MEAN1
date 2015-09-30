@@ -1,0 +1,22 @@
+<div data-ui-view>
+	<h1>This is the project detail</h1>
+	<table class="table table-striped table-responsive">
+		<thead>
+			<th>Project</th>
+			<th>User</th>
+			<th>Email</th>
+		</thead>
+		<tr>
+			<td>{{projectController.project.title}}</td>
+			<td>{{projectController.project.user.first_name}} {{projectController.project.user.last_name}}</td>
+			<td>{{projectController.project.user.email}}</td>
+			<td>
+				<a data-ui-sref="projects.detail.edit({projectId: projectController.project._id})"><span class="glyphicon glyphicon-pencil"></span>Edit</a>
+			</td>
+			<td>
+				<a data-ng-click="projectController.del(projectController.project._id)" style="color: red; cursor: pointer;"><span class="glyphicon glyphicon-remove"></span>Delete</a>
+			</td>
+		</tr>
+	</table>
+	<a data-ui-sref="projects"> << Back</a>
+</div>

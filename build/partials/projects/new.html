@@ -1,0 +1,34 @@
+<div>
+	<div class="modal-header">
+		<h2>New Project</h2>
+	</div>
+	<div class="modal-body">
+		<form name="newProjectForm">
+			<div class="form-group">
+				<label for="title">New Project Title</label>
+				<input type="text"
+					   required
+					   data-ng-model="newProject.project.title"
+					   name="text"
+					   class="form-control"
+					   id="title"/>
+			</div>
+			<div class="form-group">
+				<label for="userId">User</label>
+				<select name="userId"
+				        data-ng-options="user._id as user.fullName() for user in newProject.users"
+				        data-ng-model="newProject.project.user"
+				        class="form-control"
+				        id="userId"></select>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-info" 
+				data-ng-click="newProject.close()"
+				data-ng-disabled="newProjectForm.$invalid">Save</button>
+		
+		<button class="btn btn-danger" 
+				data-ng-click="newProject.dismiss()">Cancel</button>
+	</div>
+</div>
